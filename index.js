@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 io.on('connection', (socket) => {
     socket.on('join', function (data) {    
       socket.join(data.username);
-      console.log(data.username + ' joined');
+      console.log(data.username + ' has joined');
 
     var userId = 0
     client.execute("select * from chatApp.User where name = '" + data.username+"'", function (err, result) {
