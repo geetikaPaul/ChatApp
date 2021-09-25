@@ -13,6 +13,13 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
   });
 
+app.get('/chat.html*', (req, res) => {
+    var options = {
+      username: req.query.username
+    }
+    res.sendFile(__dirname + '/chat.html', options);
+});
+
 io.on('connection', (socket) => {
     socket.on('join', function (data) {    
       socket.join(data.username);
