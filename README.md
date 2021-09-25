@@ -24,6 +24,6 @@ For learning purpose, the schema used for this application is quite simple:<br/>
 keyspace: chatapp <br/>
 User UDT: create type user(id UUID, username text, mobile text);<br/>
 Message UDT: create type message(id UUID, txt text, time timestamp);<br/>
-Messages schema: create table messages(receiver frozen<user> Primary Key, sender frozen<user>, messages list<frozen<message>>);<br/>
+Messages schema: create table messages2(receiver frozen<user> , sender frozen<user>, messages list<frozen<message>>, PRIMARY KEY (receiver, sender));<br/>
 
 
