@@ -6,15 +6,16 @@
       body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
       
       #JoinChat { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 10; left: 0; right: 0; display: flex; height: 6rem; box-sizing: border-box; backdrop-filter: blur(10px); }
-      #username { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
-      #username:focus { outline: none; }
+      .input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+      .input:focus { outline: none; }
       #JoinChat > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
       
     </style>
   </head>
   <body>
     <form id="JoinChat" action="">
-      <input id="username"/><button>Join</button>
+      <label for="username">Username:</label>
+      <input class="input" id="username"/><button>Join</button>
     </form>
   </body>
 

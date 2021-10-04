@@ -22,8 +22,8 @@ How to use UDT (User Defined Type) for creating schema: https://cassandra.apache
 
 For learning purpose, the schema used for this application is quite simple:<br/>
 keyspace: chatapp <br/>
-User UDT: create type user(id UUID, username text, mobile text);<br/>
+User UDT: create type user(id UUID, username text);<br/>
 Message UDT: create type message(id UUID, txt text, time timestamp);<br/>
-Messages schema: create table messages2(receiver frozen<user> , sender frozen<user>, messages list<frozen<message>>, PRIMARY KEY (receiver, sender));<br/>
+Messages schema: create table messages(receiver frozen<user> , sender frozen<user>, messages list<frozen<message>>, PRIMARY KEY (receiver, sender));<br/>
 
 
